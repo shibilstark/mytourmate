@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_tour_mate/presentation/contact_screen/contact_screen.dart';
 import 'package:my_tour_mate/themes/colors.dart';
 import 'package:my_tour_mate/themes/styles.dart';
-
-import '../../common/functions/gap.dart';
+import 'package:my_tour_mate/presentation/widgets/gap.dart';
 
 class MessageWidget extends StatelessWidget {
   const MessageWidget({
@@ -46,7 +46,10 @@ class MessageWidget extends StatelessWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.sm)),
           color: lightOrange,
           padding: EdgeInsets.symmetric(vertical: 4.sm, horizontal: 12.sm),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => ContactScreen()));
+          },
           child: Text(
             "Ask A Question",
             style: TextStyle(

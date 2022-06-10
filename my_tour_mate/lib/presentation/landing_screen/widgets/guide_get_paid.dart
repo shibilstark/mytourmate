@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_tour_mate/presentation/widgets/gap.dart';
 import 'package:my_tour_mate/themes/colors.dart';
 import 'package:my_tour_mate/themes/styles.dart';
-
-import '../../common/functions/gap.dart';
 
 class GuideGetPaidWidget extends StatelessWidget {
   const GuideGetPaidWidget({Key? key}) : super(key: key);

@@ -27,3 +27,8 @@ var drawerTitleStyle = TextStyle(
   color: blackColor,
   fontSize: 18.sm,
 );
+var TextFieldTitleStyle = TextStyle(
+  color: blackColor,
+  fontSize: 13.sm,
+  fontWeight: FontWeight.w500,
+);

@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_tour_mate/themes/colors.dart';
 import 'package:my_tour_mate/themes/styles.dart';
-
-import '../../common/functions/gap.dart';
+import 'package:my_tour_mate/presentation/widgets/gap.dart';
 
 class LandingImageWidget extends StatelessWidget {
   const LandingImageWidget({

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:my_tour_mate/presentation/common/functions/gap.dart';
+import 'package:my_tour_mate/presentation/login_screen/login_screen.dart';
+import 'package:my_tour_mate/presentation/widgets/gap.dart';
 import 'package:my_tour_mate/presentation/landing_screen/drawer.dart';
 import 'package:my_tour_mate/presentation/landing_screen/widgets/guide_get_paid.dart';
 import 'package:my_tour_mate/presentation/landing_screen/widgets/landing_main_image.dart';
@@ -79,7 +80,10 @@ class LandingAppBar extends StatelessWidget {
       ),
       actions: [
         TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => LoginScreen()));
+            },
             child: Text(
               "Login",
               style: landingPageLoginStyle,

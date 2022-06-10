@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:my_tour_mate/presentation/common/functions/gap.dart';
+import 'package:my_tour_mate/presentation/widgets/common_app_bar.dart';
+import 'package:my_tour_mate/presentation/widgets/gap.dart';
 import 'package:my_tour_mate/themes/colors.dart';
 import 'package:my_tour_mate/themes/styles.dart';
 
@@ -11,23 +12,11 @@ class AboutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-          preferredSize: Size.fromHeight(55.sm), child: CommonAppBar()),
-      body: AboutBody(),
-    );
-  }
-}
-
-class CommonAppBar extends StatelessWidget {
-  const CommonAppBar({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      titleSpacing: -5,
-      title: Text(
-        "About",
-        style: appBartitleStyle,
-      ),
+          preferredSize: Size.fromHeight(55.sm),
+          child: CommonAppBar(
+            title: "About",
+          )),
+      body: SafeArea(child: AboutBody()),
     );
   }
 }

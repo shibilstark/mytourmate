@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_tour_mate/presentation/about_screen/about_screen.dart';
 import 'package:my_tour_mate/presentation/contact_screen/contact_screen.dart';
+import 'package:my_tour_mate/presentation/landing_screen/landing_screen.dart';
 import 'package:my_tour_mate/presentation/login_screen/login_screen.dart';
 import 'package:my_tour_mate/presentation/widgets/gap.dart';
 import 'package:my_tour_mate/themes/colors.dart';
 import 'package:my_tour_mate/themes/styles.dart';
 
-class LandingDrawer extends StatelessWidget {
-  const LandingDrawer({
+class MainDrawer extends StatelessWidget {
+  const MainDrawer({
     Key? key,
   }) : super(key: key);
 
@@ -73,6 +74,22 @@ class LandingDrawer extends StatelessWidget {
                   },
                   title: Text(
                     "Contact Us",
+                    style: drawerTitleStyle,
+                  ),
+                ),
+              ),
+              Card(
+                elevation: 0.5,
+                child: ListTile(
+                  onTap: () {
+                    {
+                      Navigator.of(context).pop();
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => LandingScreen()));
+                    }
+                  },
+                  title: Text(
+                    "Log Out",
                     style: drawerTitleStyle,
                   ),
                 ),
