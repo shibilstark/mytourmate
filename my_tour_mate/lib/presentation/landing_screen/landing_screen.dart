@@ -9,7 +9,7 @@ import 'package:my_tour_mate/presentation/landing_screen/widgets/message_widget.
 import 'package:my_tour_mate/themes/colors.dart';
 import 'package:my_tour_mate/themes/styles.dart';
 
-final GlobalKey<ScaffoldState> _key = GlobalKey();
+final GlobalKey<ScaffoldState> _LandingDrawerKey = GlobalKey();
 
 class LandingScreen extends StatelessWidget {
   const LandingScreen({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class LandingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _key,
+      key: _LandingDrawerKey,
       drawer: SafeArea(
         child: LandingDrawer(),
       ),
@@ -62,7 +62,7 @@ class LandingAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      titleSpacing: -5,
+      titleSpacing: -5.sm,
       leading: IconButton(
         icon: Icon(
           Icons.menu,
@@ -70,7 +70,7 @@ class LandingAppBar extends StatelessWidget {
           color: whiteColor,
         ),
         onPressed: () {
-          _key.currentState!.openDrawer();
+          _LandingDrawerKey.currentState!.openDrawer();
         },
       ),
       title: Text(

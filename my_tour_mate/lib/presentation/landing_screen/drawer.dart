@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_tour_mate/presentation/about_screen/about_screen.dart';
 import 'package:my_tour_mate/presentation/common/functions/gap.dart';
 import 'package:my_tour_mate/themes/colors.dart';
 import 'package:my_tour_mate/themes/styles.dart';
@@ -29,6 +30,11 @@ class LandingDrawer extends StatelessWidget {
               Card(
                 elevation: 0.5,
                 child: ListTile(
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => AboutScreen()));
+                  },
                   title: Text(
                     "About",
                     style: drawerTitleStyle,
@@ -83,12 +89,19 @@ class DummyProfile extends StatelessWidget {
       child: Row(children: [
         CircleAvatar(
           backgroundColor: lightOrange.withOpacity(0.7),
-          radius: 60.sm,
+          radius: 50.sm,
+          child: Center(
+              child: Icon(
+            Icons.person,
+            size: 70.sm,
+            color: whiteColor,
+          )),
         ),
-        gap(height: 20),
+        gap(width: 10.sm),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            gap(height: 10.sm),
             Container(
               height: 25.sm,
               width: 120.sm,
@@ -96,7 +109,7 @@ class DummyProfile extends StatelessWidget {
                   color: Colors.grey.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(5.sm)),
             ),
-            gap(height: 10),
+            gap(height: 10.sm),
             Container(
               height: 25.sm,
               width: 150.sm,

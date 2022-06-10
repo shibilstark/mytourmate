@@ -20,7 +20,7 @@ var landingMainTitle = TextStyle(
 var landingPageBody = TextStyle(
   color: lightOrange,
   fontSize: 16.sm,
-  height: 1.4,
+  height: 1.4.sm,
 );
 var drawerTitleStyle = TextStyle(
   fontWeight: FontWeight.w600,

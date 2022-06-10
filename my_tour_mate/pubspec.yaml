@@ -91,6 +91,10 @@ flutter:
     - lib/assets/coverImg/img333.jpg
     - lib/assets/coverImg/img-222.jpg
     - lib/assets/coverImg/images-1653223225859.jpg
+    - lib/assets/coverImg/about.jpg
+    - lib/assets/coverImg/destination-8.jpg
+    - lib/assets/coverImg/destination-9.jpg
+    - lib/assets/coverImg/services-4.jpg
 
   #   - images/a_dot_ham.jpeg
 
