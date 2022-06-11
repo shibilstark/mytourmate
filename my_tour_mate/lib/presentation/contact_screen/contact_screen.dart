@@ -15,7 +15,7 @@ class ContactScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(55.sm),
+        preferredSize: Size.fromHeight(45.sm),
         child: CommonAppBar(title: "Contact Us"),
       ),
       body: SafeArea(

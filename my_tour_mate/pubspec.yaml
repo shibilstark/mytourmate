@@ -51,6 +51,7 @@ dependencies:
   permission_handler: ^9.2.0
   url_launcher: ^6.1.0
   dartz: ^0.10.1
+  font_awesome_flutter: ^10.1.0
   flutter:
     sdk: flutter
 
@@ -95,6 +96,8 @@ flutter:
     - lib/assets/coverImg/destination-8.jpg
     - lib/assets/coverImg/destination-9.jpg
     - lib/assets/coverImg/services-4.jpg
+    - lib/assets/coverImg/images-1651518171388.png
+    - lib/assets/coverImg/images-1651519307316.webp
 
   #   - images/a_dot_ham.jpeg
 

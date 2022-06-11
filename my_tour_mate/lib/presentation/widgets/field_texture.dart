@@ -1,12 +1,16 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_tour_mate/presentation/widgets/gap.dart';
 import 'package:my_tour_mate/themes/colors.dart';
 import 'package:my_tour_mate/themes/styles.dart';
 
 class FieldTexture extends StatelessWidget {
-  const FieldTexture({Key? key, required this.title}) : super(key: key);
+  final TextEditingController controller;
+  const FieldTexture({
+    Key? key,
+    required this.title,
+    required this.controller,
+  }) : super(key: key);
 
   final String title;
 
@@ -21,6 +25,7 @@ class FieldTexture extends StatelessWidget {
         ),
         gap(height: 5.sm),
         CupertinoTextField(
+          controller: controller,
           padding: EdgeInsets.symmetric(vertical: 10.sm, horizontal: 10.sm),
           cursorColor: lightOrange,
           style: TextStyle(color: softBlackColor, fontSize: 16.sm),

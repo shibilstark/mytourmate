@@ -61,6 +61,9 @@ class LoginBody extends StatelessWidget {
   }
 }
 
+final _LoginEmailController = TextEditingController();
+final _LoginPasswordlController = TextEditingController();
+
 ValueNotifier<int> _selcetedRadio = ValueNotifier(0);
 
 class LoginContainer extends StatelessWidget {
@@ -72,7 +75,7 @@ class LoginContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 40.sm, horizontal: 30.sm),
-      height: 420.sm,
+      // height: 420.sm,
       width: 350.sm,
       decoration: BoxDecoration(
           color: whiteColor, borderRadius: BorderRadius.circular(15.sm)),
@@ -87,9 +90,10 @@ class LoginContainer extends StatelessWidget {
                 fontWeight: FontWeight.w500),
           ),
           gap(height: 30.sm),
-          const FieldTexture(title: "Email"),
+          FieldTexture(title: "Email", controller: _LoginEmailController),
           gap(height: 10.sm),
-          const FieldTexture(title: "Password"),
+          FieldTexture(
+              title: "Password", controller: _LoginPasswordlController),
           gap(height: 8),
           SizedBox(
             width: double.infinity.sm,

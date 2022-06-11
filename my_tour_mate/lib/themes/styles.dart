@@ -9,7 +9,7 @@ var appBartitleStyle = TextStyle(
 );
 var landingPageLoginStyle = TextStyle(
   color: whiteColor,
-  fontSize: 18.sm,
+  fontSize: 17.sm,
   fontWeight: FontWeight.w600,
 );
 var landingMainTitle = TextStyle(

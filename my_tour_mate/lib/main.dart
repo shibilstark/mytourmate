@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_tour_mate/presentation/home_screen/home_screen.dart';
 import 'package:my_tour_mate/presentation/landing_screen/landing_screen.dart';
 import 'package:my_tour_mate/themes/colors.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
                 appBarTheme: AppBarTheme(backgroundColor: darkOrange)),
             debugShowCheckedModeBanner: false,
-            home: const LandingScreen(),
+            home: const HomeScreen(),
           );
         });
   }

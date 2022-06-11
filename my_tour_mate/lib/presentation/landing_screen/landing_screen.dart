@@ -23,7 +23,7 @@ class LandingScreen extends StatelessWidget {
         child: LandingDrawer(),
       ),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(55.sm),
+        preferredSize: Size.fromHeight(45.sm),
         child: const LandingAppBar(),
       ),
       body: const SafeArea(child: LandingBody()),
@@ -67,7 +67,7 @@ class LandingAppBar extends StatelessWidget {
       leading: IconButton(
         icon: Icon(
           Icons.menu,
-          size: 30.sm,
+          size: 25.sm,
           color: whiteColor,
         ),
         onPressed: () {

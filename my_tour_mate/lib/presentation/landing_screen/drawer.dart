@@ -103,11 +103,11 @@ class DummyProfile extends StatelessWidget {
         child: Row(children: [
           CircleAvatar(
             backgroundColor: lightOrange.withOpacity(0.7),
-            radius: 50.sm,
+            radius: 40.sm,
             child: Center(
                 child: Icon(
               Icons.person,
-              size: 70.sm,
+              size: 60.sm,
               color: whiteColor,
             )),
           ),

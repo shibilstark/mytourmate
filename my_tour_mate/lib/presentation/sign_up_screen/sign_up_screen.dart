@@ -14,7 +14,7 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-          preferredSize: Size.fromHeight(55.sm),
+          preferredSize: Size.fromHeight(45.sm),
           child: const CommonAppBar(title: "Sign Up")),
       resizeToAvoidBottomInset: false,
       body: const SafeArea(child: SignUpBody()),
@@ -37,6 +37,13 @@ class SignUpBody extends StatelessWidget {
     );
   }
 }
+
+final _FullNameController = TextEditingController();
+final _EmailController = TextEditingController();
+final _PasswordController = TextEditingController();
+final _ConformPasswordController = TextEditingController();
+final _PlaceController = TextEditingController();
+final _AgeController = TextEditingController();
 
 class SignUpContainer extends StatelessWidget {
   const SignUpContainer({Key? key}) : super(key: key);
@@ -64,27 +71,50 @@ class SignUpContainer extends StatelessWidget {
                 child: SelectTypeWidgetSignUp(),
               ),
               gap(height: 20.sm),
-              FieldTexture(title: "Full Name"),
+              FieldTexture(
+                title: "Full Name",
+                controller: _FullNameController,
+              ),
               gap(height: 10.sm),
-              FieldTexture(title: "Email"),
+              FieldTexture(
+                title: "Email",
+                controller: _EmailController,
+              ),
               gap(height: 10.sm),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
-                      width: 150.sm, child: FieldTexture(title: "Password")),
+                      width: 150.sm,
+                      child: FieldTexture(
+                        title: "Password",
+                        controller: _PasswordController,
+                      )),
                   SizedBox(
                       width: 150.sm,
-                      child: FieldTexture(title: "Conform Password"))
+                      child: FieldTexture(
+                        title: "Conform Password",
+                        controller: _ConformPasswordController,
+                      ))
                 ],
               ),
               gap(height: 10.sm),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  SizedBox(width: 150.sm, child: FieldTexture(title: "Place")),
+                  SizedBox(
+                      width: 150.sm,
+                      child: FieldTexture(
+                        title: "Place",
+                        controller: _PlaceController,
+                      )),
                   gap(width: 24.sm),
-                  SizedBox(width: 50.sm, child: FieldTexture(title: "Age"))
+                  SizedBox(
+                      width: 50.sm,
+                      child: FieldTexture(
+                        title: "Age",
+                        controller: _AgeController,
+                      ))
                 ],
               ),
               gap(height: 15.sm),

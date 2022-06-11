@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_tour_mate/presentation/about_screen/about_screen.dart';
 import 'package:my_tour_mate/presentation/contact_screen/contact_screen.dart';
+import 'package:my_tour_mate/presentation/home_screen/widgets/profile_texture.dart';
 import 'package:my_tour_mate/presentation/landing_screen/landing_screen.dart';
 import 'package:my_tour_mate/presentation/login_screen/login_screen.dart';
 import 'package:my_tour_mate/presentation/widgets/gap.dart';
@@ -22,7 +23,7 @@ class MainDrawer extends StatelessWidget {
         width: 300.sm,
         decoration: BoxDecoration(color: whiteColor.withOpacity(0.9)),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          DummyProfile(),
+          ProfileTextures(),
           Divider(
             thickness: 0.5.sm,
             color: lightOrange,
@@ -93,60 +94,6 @@ class MainDrawer extends StatelessWidget {
                     style: drawerTitleStyle,
                   ),
                 ),
-              ),
-            ],
-          )
-        ]),
-      ),
-    );
-  }
-}
-
-class DummyProfile extends StatelessWidget {
-  const DummyProfile({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 100.sm,
-      width: 300.sm,
-      child: GestureDetector(
-        onTap: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => LoginScreen()));
-        },
-        child: Row(children: [
-          CircleAvatar(
-            backgroundColor: lightOrange.withOpacity(0.7),
-            radius: 50.sm,
-            child: Center(
-                child: Icon(
-              Icons.person,
-              size: 70.sm,
-              color: whiteColor,
-            )),
-          ),
-          gap(width: 10.sm),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              gap(height: 10.sm),
-              Container(
-                height: 25.sm,
-                width: 120.sm,
-                decoration: BoxDecoration(
-                    color: Colors.grey.withOpacity(0.3),
-                    borderRadius: BorderRadius.circular(5.sm)),
-              ),
-              gap(height: 10.sm),
-              Container(
-                height: 25.sm,
-                width: 150.sm,
-                decoration: BoxDecoration(
-                    color: Colors.grey.withOpacity(0.3),
-                    borderRadius: BorderRadius.circular(5.sm)),
               ),
             ],
           )
