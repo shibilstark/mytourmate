@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_tour_mate/presentation/blog_screen/blog_screen.dart';
-import 'package:my_tour_mate/presentation/destinations_screen/destinations_screen.dart';
 import 'package:my_tour_mate/presentation/home_screen/main_drawer.dart';
 import 'package:my_tour_mate/presentation/hotel_search_screen/hotel_search_screen.dart';
-import 'package:my_tour_mate/test.dart';
+import 'package:my_tour_mate/presentation/search_screen/screen_search.dart';
+import 'package:my_tour_mate/presentation/tourisms_screen/tourisms_screen.dart';
 import 'package:my_tour_mate/themes/colors.dart';
 import 'package:my_tour_mate/themes/styles.dart';
 
@@ -15,8 +15,8 @@ ValueNotifier<int> _bottonNav = ValueNotifier(0);
 
 final _pages = [
   BlogScreen(),
-  DestinationsScreen(),
-  TestScreen(),
+  SearchScreen(),
+  TourismsScreen(),
   HotelSearchScreen(),
 ];
 
@@ -114,16 +114,16 @@ class MyNavigationBar extends StatelessWidget {
                   label: "Home",
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.mapLocation),
-                  label: "Playlists",
+                  icon: Icon(FontAwesomeIcons.search),
+                  label: "Search",
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.addressCard),
-                  label: "Menu",
+                  icon: Icon(FontAwesomeIcons.mapLocation),
+                  label: "Destinations",
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(FontAwesomeIcons.hotel),
-                  label: "Menu",
+                  label: "Hotels",
                 ),
               ]),
         );

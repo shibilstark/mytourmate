@@ -27,13 +27,18 @@ class SignUpBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        gap(height: 30.sm),
-        BrandingTextureDark(),
-        gap(height: 20.sm),
-        SignUpContainer()
-      ],
+    return Center(
+      child: Container(
+        constraints: BoxConstraints(maxWidth: 500.sm),
+        child: ListView(
+          children: [
+            gap(height: 30.sm),
+            BrandingTextureDark(),
+            gap(height: 20.sm),
+            SignUpContainer()
+          ],
+        ),
+      ),
     );
   }
 }
@@ -66,7 +71,7 @@ class SignUpContainer extends StatelessWidget {
             children: [
               // gap(height: 20.sm),
               Container(
-                width: 200.sm,
+                width: 220.sm,
                 alignment: Alignment.center,
                 child: SelectTypeWidgetSignUp(),
               ),
@@ -82,16 +87,16 @@ class SignUpContainer extends StatelessWidget {
               ),
               gap(height: 10.sm),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
-                      width: 150.sm,
+                      width: 145.sm,
                       child: FieldTexture(
                         title: "Password",
                         controller: _PasswordController,
                       )),
+                  gap(width: 24.sm),
                   SizedBox(
-                      width: 150.sm,
+                      width: 145.sm,
                       child: FieldTexture(
                         title: "Conform Password",
                         controller: _ConformPasswordController,

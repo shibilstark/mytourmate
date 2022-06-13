@@ -36,22 +36,27 @@ class LandingBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(children: [
-      const LandingImageWidget(),
-      gap(height: 20.sm),
-      Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.sm),
-        child: Column(children: [
-          const LookingForGuideWidget(),
-          gap(height: 30.sm),
-          // ignore: prefer_const_constructors
-          GuideGetPaidWidget(),
-          gap(height: 30.sm),
-          const MessageWidget(),
-          gap(height: 30.sm)
+    return Center(
+      child: Container(
+        constraints: BoxConstraints(maxWidth: 500.sm),
+        child: ListView(children: [
+          const LandingImageWidget(),
+          gap(height: 20.sm),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.sm),
+            child: Column(children: [
+              const LookingForGuideWidget(),
+              gap(height: 30.sm),
+              // ignore: prefer_const_constructors
+              GuideGetPaidWidget(),
+              gap(height: 30.sm),
+              const MessageWidget(),
+              gap(height: 30.sm)
+            ]),
+          )
         ]),
-      )
-    ]);
+      ),
+    );
   }
 }
 
@@ -87,7 +92,7 @@ class LandingAppBar extends StatelessWidget {
             child: Text(
               "Login",
               style: landingPageLoginStyle,
-            ))
+            )),
       ],
     );
   }

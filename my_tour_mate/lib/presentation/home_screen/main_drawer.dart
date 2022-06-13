@@ -5,6 +5,7 @@ import 'package:my_tour_mate/presentation/contact_screen/contact_screen.dart';
 import 'package:my_tour_mate/presentation/home_screen/widgets/profile_texture.dart';
 import 'package:my_tour_mate/presentation/landing_screen/landing_screen.dart';
 import 'package:my_tour_mate/presentation/login_screen/login_screen.dart';
+import 'package:my_tour_mate/presentation/profile_screen/profile_screen.dart';
 import 'package:my_tour_mate/presentation/widgets/gap.dart';
 import 'package:my_tour_mate/themes/colors.dart';
 import 'package:my_tour_mate/themes/styles.dart';

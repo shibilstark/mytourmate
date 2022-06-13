@@ -32,62 +32,68 @@ class ContactScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 10.sm, horizontal: 25.sm),
-      child: ListView(
-        children: [
-          gap(height: 20.sm),
-          BrandingTextureDark(),
-          gap(height: 25.sm),
-          Text(
-            "Name",
-            style: TextFieldTitleStyle,
+    return Center(
+      child: Container(
+        constraints: BoxConstraints(maxWidth: 500.sm),
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 10.sm, horizontal: 25.sm),
+          child: ListView(
+            children: [
+              gap(height: 20.sm),
+              BrandingTextureDark(),
+              gap(height: 25.sm),
+              Text(
+                "Name",
+                style: TextFieldTitleStyle,
+              ),
+              gap(height: 5.sm),
+              CupertinoTextField(
+                cursorColor: lightOrange,
+                style: TextStyle(color: softBlackColor, fontSize: 14.sm),
+                decoration: BoxDecoration(
+                    color: softGrey, borderRadius: BorderRadius.circular(4.sm)),
+              ),
+              gap(height: 10.sm),
+              Text(
+                "Email",
+                style: TextFieldTitleStyle,
+              ),
+              gap(height: 5.sm),
+              CupertinoTextField(
+                cursorColor: lightOrange,
+                style: TextStyle(color: softBlackColor, fontSize: 14.sm),
+                decoration: BoxDecoration(
+                    color: softGrey, borderRadius: BorderRadius.circular(4.sm)),
+              ),
+              gap(height: 10.sm),
+              Text(
+                "Message",
+                style: TextFieldTitleStyle,
+              ),
+              gap(height: 5.sm),
+              SizedBox(
+                height: 150.sm,
+                child: CupertinoTextField(
+                  cursorColor: lightOrange,
+                  style: TextStyle(color: softBlackColor, fontSize: 14.sm),
+                  decoration: BoxDecoration(
+                      color: softGrey,
+                      borderRadius: BorderRadius.circular(4.sm)),
+                ),
+              ),
+              gap(height: 50.sm),
+              MaterialButton(
+                color: lightOrange,
+                onPressed: () {},
+                child: Text(
+                  "Send",
+                  style: landingMainTitle.copyWith(
+                      color: whiteColor, fontSize: 19.sm),
+                ),
+              )
+            ],
           ),
-          gap(height: 5.sm),
-          CupertinoTextField(
-            cursorColor: lightOrange,
-            style: TextStyle(color: softBlackColor, fontSize: 14.sm),
-            decoration: BoxDecoration(
-                color: softGrey, borderRadius: BorderRadius.circular(4.sm)),
-          ),
-          gap(height: 10.sm),
-          Text(
-            "Email",
-            style: TextFieldTitleStyle,
-          ),
-          gap(height: 5.sm),
-          CupertinoTextField(
-            cursorColor: lightOrange,
-            style: TextStyle(color: softBlackColor, fontSize: 14.sm),
-            decoration: BoxDecoration(
-                color: softGrey, borderRadius: BorderRadius.circular(4.sm)),
-          ),
-          gap(height: 10.sm),
-          Text(
-            "Message",
-            style: TextFieldTitleStyle,
-          ),
-          gap(height: 5.sm),
-          SizedBox(
-            height: 150.sm,
-            child: CupertinoTextField(
-              cursorColor: lightOrange,
-              style: TextStyle(color: softBlackColor, fontSize: 14.sm),
-              decoration: BoxDecoration(
-                  color: softGrey, borderRadius: BorderRadius.circular(4.sm)),
-            ),
-          ),
-          gap(height: 50.sm),
-          MaterialButton(
-            color: lightOrange,
-            onPressed: () {},
-            child: Text(
-              "Send",
-              style:
-                  landingMainTitle.copyWith(color: whiteColor, fontSize: 19.sm),
-            ),
-          )
-        ],
+        ),
       ),
     );
   }

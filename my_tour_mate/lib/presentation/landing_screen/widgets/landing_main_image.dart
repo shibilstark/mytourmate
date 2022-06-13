@@ -39,7 +39,7 @@ class LandingImageWidget extends StatelessWidget {
               //       offset: Offset.fromDirection(1, 1),
               //       blurRadius: 4)
               // ],
-              fontSize: 28.sp,
+              fontSize: 28.sm,
               fontWeight: FontWeight.w700),
         )
       ],

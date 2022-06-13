@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_tour_mate/presentation/profile_screen/profile_screen.dart';
 import 'package:my_tour_mate/presentation/widgets/gap.dart';
 import 'package:my_tour_mate/themes/colors.dart';
 
@@ -15,15 +16,18 @@ class ProfileTextures extends StatelessWidget {
       width: 300.sm,
       child: GestureDetector(
         onTap: () {
-          // Navigator.of(context)
-          //     .push(MaterialPageRoute(builder: (context) => LoginScreen()));
+          Navigator.of(context).pop();
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => ProfileScreen()));
         },
         child: Row(children: [
-          CircleAvatar(
-            // backgroundColor: lightOrange.withOpacity(0.7),
-            radius: 40.sm,
-            backgroundImage:
-                AssetImage("lib/assets/coverImg/images-1651518171388.png"),
+          GestureDetector(
+            child: CircleAvatar(
+              // backgroundColor: lightOrange.withOpacity(0.7),
+              radius: 40.sm,
+              backgroundImage:
+                  AssetImage("lib/assets/coverImg/images-1651518171388.png"),
+            ),
           ),
           gap(width: 10.sm),
           Column(

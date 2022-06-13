@@ -26,73 +26,78 @@ class AboutBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15.sm, vertical: 10.sm),
-      child: ListView(
-        children: [
-          Text(
-            "Our Services",
-            style: landingMainTitle,
+    return Center(
+      child: Container(
+        constraints: BoxConstraints(maxWidth: 500.sm),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15.sm, vertical: 10.sm),
+          child: ListView(
+            children: [
+              Text(
+                "Our Services",
+                style: landingMainTitle,
+              ),
+              gap(height: 10.sm),
+              AboutGridView(),
+              gap(height: 30.sm),
+              Text(
+                "Tourism industry is has emerged as one of the fastest growing industries in the world and economically important for rapid growth for India.",
+                style: landingPageBody,
+                textAlign: TextAlign.center,
+              ),
+              gap(height: 10.sm),
+              Text(
+                "We are providing valuable services for your journey makes beautiful.You can find and select your private guides for your travel, we strictly promote you for choose properties insted of Hotels Because it will awesome if you stay at properties",
+                style: landingPageBody,
+                textAlign: TextAlign.center,
+              ),
+              gap(height: 30.sm),
+              Container(
+                padding: EdgeInsets.all(20.sm),
+                height: 500.sm,
+                decoration: BoxDecoration(
+                    color: blackColor,
+                    borderRadius: BorderRadius.circular(20.sm),
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage("lib/assets/coverImg/about.jpg"),
+                        opacity: 0.5)),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Make Your Travel Stories Memorable and Safe With Us",
+                        style: landingMainTitle.copyWith(color: whiteColor),
+                        textAlign: TextAlign.center,
+                      ),
+                      gap(height: 30.sm),
+                      Text(
+                        "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.s",
+                        style: landingPageBody.copyWith(
+                          color: whiteColor.withOpacity(0.8),
+                          fontWeight: FontWeight.normal,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      gap(height: 50.sm),
+                      MaterialButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Contact Us",
+                          style: landingMainTitle.copyWith(
+                              color: whiteColor, fontSize: 20.sm),
+                        ),
+                        color: lightOrange,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5.sm)),
+                      ),
+                    ]),
+              ),
+              gap(height: 20.sm)
+            ],
           ),
-          gap(height: 10.sm),
-          AboutGridView(),
-          gap(height: 30.sm),
-          Text(
-            "Tourism industry is has emerged as one of the fastest growing industries in the world and economically important for rapid growth for India.",
-            style: landingPageBody,
-            textAlign: TextAlign.center,
-          ),
-          gap(height: 10.sm),
-          Text(
-            "We are providing valuable services for your journey makes beautiful.You can find and select your private guides for your travel, we strictly promote you for choose properties insted of Hotels Because it will awesome if you stay at properties",
-            style: landingPageBody,
-            textAlign: TextAlign.center,
-          ),
-          gap(height: 30.sm),
-          Container(
-            padding: EdgeInsets.all(20.sm),
-            height: 500.sm,
-            decoration: BoxDecoration(
-                color: blackColor,
-                borderRadius: BorderRadius.circular(20.sm),
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage("lib/assets/coverImg/about.jpg"),
-                    opacity: 0.5)),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Make Your Travel Stories Memorable and Safe With Us",
-                    style: landingMainTitle.copyWith(color: whiteColor),
-                    textAlign: TextAlign.center,
-                  ),
-                  gap(height: 30.sm),
-                  Text(
-                    "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.s",
-                    style: landingPageBody.copyWith(
-                      color: whiteColor.withOpacity(0.8),
-                      fontWeight: FontWeight.normal,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  gap(height: 50.sm),
-                  MaterialButton(
-                    onPressed: () {},
-                    child: Text(
-                      "Contact Us",
-                      style: landingMainTitle.copyWith(
-                          color: whiteColor, fontSize: 20.sm),
-                    ),
-                    color: lightOrange,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5.sm)),
-                  ),
-                ]),
-          ),
-          gap(height: 20.sm)
-        ],
+        ),
       ),
     );
   }
